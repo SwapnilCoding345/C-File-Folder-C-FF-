@@ -1,1 +1,241 @@
-<iframe width="642" height="362" src="https://en.mnogoporno.me/embed/24975" frameborder="0" allowfullscreen></iframe>
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+
+  <meta charset="UTF-8">
+  
+<link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+<meta name="apple-mobile-web-app-title" content="CodePen">
+
+<link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+<link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-8f3771b1072e3c38bd662872f6b673a722f4b3ca2421637d5596661b4e2132cc.svg" color="#111" />
+
+
+  <title>CodePen - Speech Recognition App by Swapnil </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <style>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-family: "Sofia",sans-serif;
+  font-size: 20px;
+}
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 50px 0;
+}
+section h1 {
+  color: white;
+  text-align: center;
+  width: 100%;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+section p {
+  text-align: center;
+  color:white;
+  width: 100%;
+  margin-bottom: 40px;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  justify-content: center;
+}
+.texts p {
+  color: black;
+  text-align: left;
+  width: 100%;
+  background-color: white;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.texts p.replay {
+  text-align: right;
+}
+</style>
+
+<bogy background="https://gfycat.com/acceptableethicalirukandjijellyfish" style="background-repeat:no-repeat;background-size:100% 100%">
+  <section>
+<h1>Ask me Anything</h1>
+<p>
+I am your AI
+<div class="container">
+<div class="texts">
+</div>
+</div>
+</p></section>
+  
+  
+      <script id="rendered-js" >
+const texts = document.querySelector(".texts");
+
+window.SpeechRecognition =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const recognition = new SpeechRecognition();
+recognition.interimResults = true;
+
+let p = document.createElement("p");
+
+recognition.addEventListener("result", (e) => {
+  texts.appendChild(p);
+  const text = Array.from(e.results)
+    .map((result) => result[0])
+    .map((result) => result.transcript)
+    .join("");
+
+  p.innerText = text;
+  if (e.results[0].isFinal) {
+    if (
+      text.includes("how are you") ||
+      text.includes("are you there") ||
+      text.includes("hi") ||
+      text.includes("Hello")
+    ) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "hello I am fine";
+      texts.appendChild(p);
+    }
+    if (
+      text.includes("what's your name") ||
+      text.includes("what is your name") ||
+      text.includes("your name") ||
+      text.includes("who is your creator") ||
+      text.includes("When did you") ||
+      text.includes("Hi") ||
+      text.includes("Hi what is your name") ||
+      text.includes("hello Assistant")
+    ) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText =
+        "My Name is Jarvis 😝and my creator  is Swapnil🧐. I was born in November 2021🚼";
+      texts.appendChild(p);
+    }
+    if (
+      text.includes("when your was creator born") ||
+      text.includes("when did you born")
+    ) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText =
+        "I was born in nov. 2021and my creator was born in 2009 Sep.";
+      texts.appendChild(p);
+    }
+    if (
+      text.includes("how are you") ||
+      text.includes("are you there") ||
+      text.includes("hello")
+    ) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "hi👋👋";
+      texts.appendChild(p);
+    }
+    if (text.includes("open YouTube")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening youtube";
+      texts.appendChild(p);
+      console.log("opening youtube");
+      window.open("https://www.youtube.com/");
+    }
+
+    if (text.includes("open Google")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening Google";
+      texts.appendChild(p);
+      console.log("opening Google");
+      window.open("https://www.google.com/");
+    }
+    if (text.includes("open mail")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening Gmail";
+      texts.appendChild(p);
+      console.log("opening Gmail");
+      window.open("https://www.gmail.com/");
+    }
+    if (text.includes("open Play")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening Play";
+      texts.appendChild(p);
+      console.log("opening Play ");
+      window.open("https://play.google.com/");
+    }
+    if (text.includes("open project")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening your project";
+      texts.appendChild(p);
+      console.log("opening project ");
+      window.open("https://3in1rajeshswapnilomm.github.io/swapnipoyy/");
+    }
+
+    if (text.includes("open computer project")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening your main project";
+      texts.appendChild(p);
+      console.log("opening main project ");
+      window.open("https://3in1rajeshswapnilomm.github.io/tu/");
+    }
+    if (text.includes("open digital")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening your digital";
+      texts.appendChild(p);
+      console.log("opening digital clock ");
+      window.open("https://cdpn.io/Coding-Swapnil/debug/porOmYM/DqADdYDEPOBA");
+    }
+    if (text.includes("open calculator")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening your cal.";
+      texts.appendChild(p);
+      console.log("opening calculator");
+      window.open("https://cdpn.io/Coding-Swapnil/debug/RwZerOa/bYAdypaenJgk");
+    }
+
+    if (text.includes("open clock")) {
+      p = document.createElement("p");
+      p.classList.add("replay");
+      p.innerText = "opening your clock";
+      texts.appendChild(p);
+      console.log("opening clock");
+      window.open("https://cdpn.io/swapnilrtk/debug/yLoxWRm/mWMoNzmbQbPk");
+    }
+    p = document.createElement("p");
+  }
+});
+
+recognition.addEventListener("end", () => {
+  recognition.start();
+});
+
+recognition.start();
+    </script>
+
+  
+
+</body>
+
+</html>
+ 
